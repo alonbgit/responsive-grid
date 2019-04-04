@@ -1,25 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ResponsiveGrid from './components/responsive-grid/responsive-grid';
+import './App.scss';
 
 class App extends Component {
   render() {
+    const url = 'https://images.pexels.com/photos/658687/pexels-photo-658687.jpeg?cs=srgb&dl=beautiful-bloom-blooming-658687.jpg&fm=jpg';
+    const url2 = 'http://www.flowerglossary.com/wp-content/uploads/2017/09/balloon-flower.jpg';
+    const url3 = 'http://b.static.trunity.net/files/299501_299600/299598/vertical-farming-chris-jacobs.jpg';
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className='grid-container'>
+          <ResponsiveGrid layouts={[
+            {
+              columns: 3,
+              screenWidth: 1300,
+              gutterWidth: 30,
+              gutterHeight: 20,
+            },
+            {
+                columns: 1,
+                screenWidth: 0,
+                gutterWidth: 30,
+                gutterHeight: 20,
+            },
+            {
+              columns: 2,
+              screenWidth: 700,
+              gutterWidth: 30,
+              gutterHeight: 20,
+            },
+          ]}>
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+          </ResponsiveGrid>
+        </div>
       </div>
     );
   }
