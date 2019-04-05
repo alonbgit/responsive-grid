@@ -6,7 +6,12 @@ import './responsive-grid.scss';
 class ResponsiveGrid extends Component {
     static propTypes = {
         children: PropTypes.node,
-        layouts: PropTypes.instanceOf(Array),
+        layouts: PropTypes.arrayOf(PropTypes.shape({
+            columns: PropTypes.number.isRequired,
+            screenWidth: PropTypes.number.isRequired,
+            gutterWidth: PropTypes.number.isRequired,
+            gutterHeight: PropTypes.number.isRequired,
+        })),
     }
 
     static defaultProps = {
@@ -19,8 +24,13 @@ class ResponsiveGrid extends Component {
         }]
     }
 
-    state = {
-        layout: this.props.layouts[0],
+    constructor (props) {
+        super(props);
+
+        const { layouts } = props;
+        this.state = {
+            layout: layouts[0],
+        };
     }
 
     componentDidMount () {
@@ -39,9 +49,8 @@ class ResponsiveGrid extends Component {
         const width = window.innerWidth;
         const { layouts } = this.props;
         const layout =
-            layouts.filter(c => c.screenWidth <= width).reduce(function(layoutA, layoutB) {
-                return layoutA.screenWidth > layoutB.screenWidth ? layoutA : layoutB;
-            });
+            layouts.filter(c => c.screenWidth <= width)
+            .reduce((layoutA, layoutB) => layoutA.screenWidth > layoutB.screenWidth ? layoutA : layoutB);
         
         const existingLayout = this.state.layout;
         if (existingLayout !== layout) {
@@ -79,7 +88,8 @@ class ResponsiveGrid extends Component {
         }
         children.forEach((child) => {
             const columnIndex = this.findLowestColumnIndex(heights);
-            heights[columnIndex] += child.props.height ? child.props.height : 0;
+            const { height } = child.props;
+            heights[columnIndex] += height ? height : 0;
             const subArr = arr[columnIndex];
             subArr.push(child);
         });
@@ -87,7 +97,6 @@ class ResponsiveGrid extends Component {
     }
 
     render () {
-        console.log('render');
         const { children } = this.props;
         if (!children) {
             return (null);

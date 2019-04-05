@@ -76,13 +76,29 @@ class App extends Component {
       {
         url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
         height: 320,
-      }
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
     ]
   }
 
   renderImage (url, index, height) {
     return (
-      <div className='image-container' height={height}>
+      <div className='image-container' height={height} key={index}>
         <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
         <div className='index'>{index}</div>
       </div>
@@ -173,7 +189,36 @@ class App extends Component {
       {
         url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
         height: 320,
-      }
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      
     ];
     items = [...items, ...moreItems];
     this.setState({
