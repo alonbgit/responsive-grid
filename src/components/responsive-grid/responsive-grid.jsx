@@ -26,7 +26,7 @@ class ResponsiveGrid extends Component {
     componentDidMount () {
         if (typeof window !== 'undefined') {
             this.onWindowResize();
-            this.onWindowResize = throttle(this.onWindowResize, 500);
+            this.onWindowResize = throttle(this.onWindowResize, 100);
             window.addEventListener('resize', this.onWindowResize);
         }
     }
@@ -43,9 +43,12 @@ class ResponsiveGrid extends Component {
                 return layoutA.screenWidth > layoutB.screenWidth ? layoutA : layoutB;
             });
         
-        this.setState({
-            layout,
-        });
+        const existingLayout = this.state.layout;
+        if (existingLayout !== layout) {
+            this.setState({
+                layout,
+            });
+        }
     }
 
     getColumnWidth (columns) {
@@ -60,25 +63,31 @@ class ResponsiveGrid extends Component {
         return index < length - 1 ? gutterHeight : 0;
     }
 
+    findLowestColumnIndex (heights) {
+        const maxHeight = Math.min(...heights);
+        const index = heights.findIndex(c => c === maxHeight);
+        return index;
+    }
+
     splitChildrenToColumns (columns) {
         const children = React.Children.toArray(this.props.children);
-        let columnIndex = 0;
         const arr = [];
+        let heights = [];
         for (let i = 0; i < columns; i++) {
             arr[i] = [];
+            heights[i] = 0;
         }
         children.forEach((child) => {
+            const columnIndex = this.findLowestColumnIndex(heights);
+            heights[columnIndex] += child.props.height ? child.props.height : 0;
             const subArr = arr[columnIndex];
             subArr.push(child);
-            columnIndex++;
-            if (columnIndex === columns) {
-                columnIndex = 0;
-            }
         });
         return arr;
     }
 
     render () {
+        console.log('render');
         const { children } = this.props;
         if (!children) {
             return (null);
