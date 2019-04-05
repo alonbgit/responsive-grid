@@ -64,8 +64,8 @@ class ResponsiveGrid extends Component {
     }
 
     findLowestColumnIndex (heights) {
-        const maxHeight = Math.min(...heights);
-        const index = heights.findIndex(c => c === maxHeight);
+        const minHeight = Math.min(...heights);
+        const index = heights.findIndex(c => c === minHeight);
         return index;
     }
 

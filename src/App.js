@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import ResponsiveGrid from './components/responsive-grid/responsive-grid';
 import './App.scss';
 
