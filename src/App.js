@@ -25,7 +25,7 @@ class App extends Component {
             },
             {
               columns: 4,
-              screenWidth: 1920,
+              screenWidth: 1400,
               gutterWidth: 20,
               gutterHeight: 20,
             },
@@ -35,19 +35,11 @@ class App extends Component {
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
@@ -55,19 +47,11 @@ class App extends Component {
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
@@ -75,27 +59,11 @@ class App extends Component {
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
-            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
@@ -103,9 +71,11 @@ class App extends Component {
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
           </ResponsiveGrid>
