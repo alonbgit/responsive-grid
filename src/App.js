@@ -12,24 +12,92 @@ class App extends Component {
         <div className='grid-container'>
           <ResponsiveGrid layouts={[
             {
-              columns: 3,
-              screenWidth: 1300,
-              gutterWidth: 30,
-              gutterHeight: 20,
-            },
-            {
                 columns: 1,
                 screenWidth: 0,
-                gutterWidth: 30,
-                gutterHeight: 20,
+                gutterWidth: 40,
+                gutterHeight: 40,
             },
             {
               columns: 2,
-              screenWidth: 700,
+              screenWidth: 1024,
               gutterWidth: 30,
+              gutterHeight: 30,
+            },
+            {
+              columns: 4,
+              screenWidth: 1920,
+              gutterWidth: 20,
               gutterHeight: 20,
             },
           ]}>
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
+            <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url2} style={{ width: '100%', height: 'auto' }} alt='' />
             <img src={url3} style={{ width: '100%', height: 'auto' }} alt='' />

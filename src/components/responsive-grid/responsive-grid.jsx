@@ -79,7 +79,7 @@ class ResponsiveGrid extends Component {
     }
 
     render () {
-        const { layouts, children } = this.props;
+        const { children } = this.props;
         if (!children) {
             return (null);
         }
@@ -89,19 +89,21 @@ class ResponsiveGrid extends Component {
         const chunks = this.splitChildrenToColumns(columns);
         return (
             <div className='responsive-grid'>
-               {[...Array(columns)].map((columnItem, column) => {
+               {[...Array(columns)].map((columItem, column) => {
                    const columnChildren = chunks[column];
+                   const marginRight = this.getMarginRight(columns, column, gutterWidth);
                    return (
                        <div
                             key={column}
-                            style={{ width: columnWidth, marginRight: `${this.getMarginRight(columns, column, gutterWidth)}px` }}
+                            style={{ width: columnWidth, marginRight: `${marginRight}px` }}
                             className='responsive-grid_grid-column'
                         >
                             {columnChildren.map((child, index) => {
+                                const marginBottom = this.getMarginBottom(index, columnChildren.length, gutterHeight);
                                 return (
                                     <div
                                         key={index}
-                                        className='responsive-grid__grid-cell' style={{ marginBottom: `${this.getMarginBottom(index, columnChildren.length, gutterHeight)}px` }}
+                                        className='responsive-grid__grid-cell' style={{ marginBottom: `${marginBottom}px` }}
                                     >
                                         {child}
                                     </div>
