@@ -3,6 +3,83 @@ import ResponsiveGrid from './components/responsive-grid/responsive-grid';
 import './App.scss';
 
 class App extends Component {
+  state = {
+    items: [
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      }
+    ]
+  }
+
   renderImage (url, index, height) {
     return (
       <div className='image-container' height={height}>
@@ -12,10 +89,99 @@ class App extends Component {
     )
   }
 
+  createItems () {
+    return (
+      this.state.items.map((item, index) => {
+        return (
+          this.renderImage(item.url, index, item.height)
+        )
+      })
+    )
+  }
+
+  appendMore = () => {
+    let items = [...this.state.items];
+    const moreItems = [
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      },
+      {
+        url: 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg',
+        height: 205,
+      },
+      {
+        url: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg',
+        height: 648,
+      },
+      {
+        url: 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg',
+        height: 320,
+      }
+    ];
+    items = [...items, ...moreItems];
+    this.setState({
+      items,
+    });
+  }
+
   render() {
-    const url = 'http://eskipaper.com/images/beautiful-yellow-flowers-2.jpg';
-    const url2 = 'https://upload.wikimedia.org/wikipedia/commons/1/18/Flowers_of_india_16.jpg';
-    const url3 = 'https://images4-b.ravelrycache.com/uploads/dunnica/328600413/01_Crocodile_Flower_small2.jpg';
     return (
       <div className="App">
         <div className='grid-container'>
@@ -51,58 +217,10 @@ class App extends Component {
               gutterHeight: 20,
             },
           ]}>
-            {this.renderImage(url, 0, 205)}
-            {this.renderImage(url2, 1, 648)}
-            {this.renderImage(url3, 2, 320)}
-            {this.renderImage(url, 3, 205)}
-            {this.renderImage(url2, 4, 648)}
-            {this.renderImage(url3, 5, 320)}
-            {this.renderImage(url, 6, 205)}
-            {this.renderImage(url2, 7, 648)}
-            {this.renderImage(url3, 8, 320)}
-            {this.renderImage(url, 9, 205)}
-            {this.renderImage(url2, 10, 648)}
-            {this.renderImage(url3, 11, 320)}
-            {this.renderImage(url, 12, 205)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url, 0, 205)}
-            {this.renderImage(url2, 1, 648)}
-            {this.renderImage(url3, 2, 320)}
-            {this.renderImage(url, 3, 205)}
-            {this.renderImage(url2, 4, 648)}
-            {this.renderImage(url3, 5, 320)}
-            {this.renderImage(url, 6, 205)}
-            {this.renderImage(url2, 7, 648)}
-            {this.renderImage(url3, 8, 320)}
-            {this.renderImage(url, 9, 205)}
-            {this.renderImage(url2, 10, 648)}
-            {this.renderImage(url3, 11, 320)}
-            {this.renderImage(url, 12, 205)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 5, 320)}
-            {this.renderImage(url3, 5, 320)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url2, 13, 648)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url3, 14, 320)}
-            {this.renderImage(url2, 14, 320)}
-            {this.renderImage(url2, 5, 320)}
-            {this.renderImage(url2, 5, 320)}
-            {this.renderImage(url2, 5, 320)}
+            {this.createItems()}
           </ResponsiveGrid>
         </div>
+        <button onClick={this.appendMore}>append</button>
       </div>
     );
   }
