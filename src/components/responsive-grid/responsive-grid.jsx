@@ -36,9 +36,6 @@ class ResponsiveGrid extends Component {
     }
 
     componentDidMount () {
-        this.setState({
-            isHidden: false,
-        });
         this.changeLayout(true);
         this.onWindowResize = throttle(this.onWindowResize, 100);
         window.addEventListener('resize', this.onWindowResize);
