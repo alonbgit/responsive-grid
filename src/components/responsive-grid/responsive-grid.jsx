@@ -60,14 +60,19 @@ class ResponsiveGrid extends Component {
             .reduce((layoutA, layoutB) => layoutA.screenWidth > layoutB.screenWidth ? layoutA : layoutB);
         
         const state = {};
+        let requireSetState = false;
         const existingLayout = this.state.layout;
         if (existingLayout !== layout) {
             state.layout = layout;
+            requireSetState = true;
         }
         if (isFirstResize) {
             state.isHidden = false;
+            requireSetState = true;
         }
-        this.setState(state);
+        if (requireSetState) {
+            this.setState(state);
+        }
     }
 
     getColumnWidth (columns) {
