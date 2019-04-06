@@ -1,3 +1,9 @@
 .responsive-grid {
     display: flex;
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &.hidden {
+        opacity: 0;
+    }
 }

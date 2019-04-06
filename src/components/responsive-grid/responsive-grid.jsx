@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { throttle } from 'lodash';
 import './responsive-grid.scss';
 
@@ -30,15 +31,17 @@ class ResponsiveGrid extends Component {
         const { layouts } = props;
         this.state = {
             layout: layouts[0],
+            isHidden: true,
         };
     }
 
     componentDidMount () {
-        if (typeof window !== 'undefined') {
-            this.onWindowResize();
-            this.onWindowResize = throttle(this.onWindowResize, 100);
-            window.addEventListener('resize', this.onWindowResize);
-        }
+        this.setState({
+            isHidden: false,
+        });
+        this.changeLayout(true);
+        this.onWindowResize = throttle(this.onWindowResize, 100);
+        window.addEventListener('resize', this.onWindowResize);
     }
 
     componentWillUnmount () {
@@ -46,18 +49,25 @@ class ResponsiveGrid extends Component {
     }
 
     onWindowResize = () => {
+        this.changeLayout();
+    }
+
+    changeLayout (isFirstResize) {
         const width = window.innerWidth;
         const { layouts } = this.props;
         const layout =
             layouts.filter(c => c.screenWidth <= width)
             .reduce((layoutA, layoutB) => layoutA.screenWidth > layoutB.screenWidth ? layoutA : layoutB);
         
+        const state = {};
         const existingLayout = this.state.layout;
         if (existingLayout !== layout) {
-            this.setState({
-                layout,
-            });
+            state.layout = layout;
         }
+        if (isFirstResize) {
+            state.isHidden = false;
+        }
+        this.setState(state);
     }
 
     getColumnWidth (columns) {
@@ -101,12 +111,12 @@ class ResponsiveGrid extends Component {
         if (!children) {
             return (null);
         }
-        const { layout } = this.state;
+        const { layout, isHidden } = this.state;
         const { columns, gutterWidth, gutterHeight } = layout;
         const columnWidth = this.getColumnWidth(columns);
         const chunks = this.splitChildrenToColumns(columns);
         return (
-            <div className='responsive-grid'>
+            <div className={classNames('responsive-grid', { hidden: isHidden })}>
                {[...Array(columns)].map((columItem, column) => {
                    const columnChildren = chunks[column];
                    const marginRight = this.getMarginRight(columns, column, gutterWidth);
